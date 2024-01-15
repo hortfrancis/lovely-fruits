@@ -32,3 +32,10 @@ fruitForm.addEventListener(
         addListItem(fruitInput.value);
     }
 )
+
+fruitList.addEventListener(
+    'click',
+    (event) => {
+        if (event.target.tagName === 'LI') event.target.remove();
+    }
+)
