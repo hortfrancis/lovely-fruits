@@ -28,6 +28,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* 
