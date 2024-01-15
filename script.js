@@ -12,15 +12,22 @@ const addListItem = async (fruit) => {
 
     const li = document.createElement('li');
 
+    // Add fruit name
     const span = document.createElement('span');
     span.classList.add('fruit-list__item-title')
     span.innerText = fruit;
 
+    // Add fruit image 
     const img = document.createElement('img');
     const imgUrl = await fetchFruitImgUrl(fruit);
     img.setAttribute('src', imgUrl);
 
+    // Add fruit data 
+    const data = await fetchFruitData(fruit);
+    const table = makeTable(data);
+
     li.append(span, img);
+    li.innerHTML += table;
     fruitList.append(li);
 }
 
@@ -30,6 +37,22 @@ const fetchFruitImgUrl = async (fruit) => {
     return data.hits[0].webformatURL;
 }
 
+const fetchFruitData = async (fruit) => {
+    const response = await fetch(`https://fruity-api.onrender.com/api/fruits/${fruit}`)
+    const data = await response.json();
+    return data.nutritions;
+}
+
+const makeTable = data => {
+    let table = '<table><tbody>';
+
+    for (const item in data) {
+        table += `<tr><td>${item}</td><td>${data[item]}</td></tr>`;
+    }
+
+    table += '</tbody></table>';
+    return table;
+}
 
 /*
     Event listeners 
