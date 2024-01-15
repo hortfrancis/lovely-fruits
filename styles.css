@@ -1,3 +1,72 @@
 .fruit-list__item-title {
-    color: red;   /* For testing */ 
+    color: red;
+    /* For testing */
+}
+
+body,
+input,
+button {
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.5rem;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 3rem;
+
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: ghostWhite;
+}
+
+input,
+button {
+    padding: 1rem;
+    border-radius: 0.2rem;
+}
+
+input {
+    border: 0.5rem solid #9C27B0;
+
+}
+
+input::placeholder {
+    color: #aa84c8;
+}
+
+input:hover,
+input:active,
+input:focus {
+    border-color: gold;
+    outline: none;
+}
+
+button {
+    color: ghostWhite;
+    background-color: #9C27B0;
+    border: none;
+    letter-spacing: 0.1ch;
+}
+
+button:hover,
+button:active,
+button:focus {
+    background-color: gold;
+    color: black;
+}
+
+
+.text-purple {
+    color: #9C27B0;
 }
