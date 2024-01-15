@@ -2,7 +2,7 @@
     Base styles 
 */
 
-*, 
+*,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -112,7 +112,7 @@ li {
 }
 
 li:hover {
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 li::after {
@@ -132,7 +132,6 @@ li::after {
     height: 4rem;
     font-size: 4rem;
     padding-bottom: 0.6rem;
-    /* padding-bottom: 0.2rem; */
 }
 
 li:hover::after {
@@ -142,15 +141,24 @@ li:hover::after {
 img {
     display: block;
     width: 100%;
-
-    border-radius: 0 0 0.5rem 0.5rem;
 }
 
-.fruit-list__item-title {}
+.fruit-list__item-table-container {
+    width: 100%;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
 
+table {
+    border-collapse: collapse;
+    width: 100%;
 
+}
 
-
+td {
+    padding: 0.5rem 1rem;
+    border: 0.25rem solid #aa84c8;
+    border-radius: 0.2rem;
+}
 
 .text-purple {
     color: #9C27B0;

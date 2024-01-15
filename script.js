@@ -44,13 +44,13 @@ const fetchFruitData = async (fruit) => {
 }
 
 const makeTable = data => {
-    let table = '<table><tbody>';
+    let table = '<div class="fruit-list__item-table-container"><table><tbody>';
 
     for (const item in data) {
         table += `<tr><td>${item}</td><td>${data[item]}</td></tr>`;
     }
 
-    table += '</tbody></table>';
+    table += '</tbody></table></div>';
     return table;
 }
 
