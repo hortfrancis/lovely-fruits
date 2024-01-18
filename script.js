@@ -38,7 +38,7 @@ const fetchFruitImgUrl = async (fruit) => {
 }
 
 const fetchFruitData = async (fruit) => {
-    const response = await fetch(`https://fruity-api.onrender.com/api/fruits/${fruit}`)
+    const response = await fetch(`https://hortfrancis-fruit-api.onrender.com/fruits/${fruit}`)
     const data = await response.json();
     return data.nutritions;
 }
